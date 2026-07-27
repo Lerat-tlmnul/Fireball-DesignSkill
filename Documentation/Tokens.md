@@ -1,3 +1,5 @@
+> ⚠️ **Note**: Scroll down for newer versions (e.g., v1.2 Eco Mod).
+
 # 📊 Token Consumption (Fireball Design v1.2)
 
 Fireball Design v1.2 is designed to generate complete, production-ready interfaces. While the prompt itself is relatively compact, the total token consumption becomes significantly larger because modern LLMs resend the conversation history at every turn.
@@ -30,6 +32,40 @@ At each new conversation turn, they receive:
 As the generated website becomes larger, every new iteration requires rereading more content, which increases token usage rapidly.
 
 For this reason, a complete website generation with Fireball Design v1.2 typically reaches **around 20k tokens** when the model performs multi-step reasoning before producing the final result.
+
+> **Note**
+>
+> The values above are estimates, not fixed limits. Actual token usage depends on the model, the complexity of the request, the size of the generated code, and the amount of conversation history included in the context.
+
+---
+
+# 📊 Token Consumption (Fireball Design v1.2 Eco Mod)
+
+Fireball Design v1.2 Eco Mod is optimized to reduce token usage while still generating complete, production-ready interfaces. By minimizing intermediate responses and optimizing internal reasoning, this version significantly lowers the total cost.
+
+A typical generation in Eco Mod consumes **around 13,201 tokens** in total.
+
+## Example
+
+| Step | Content | Approximate Tokens |
+|------|---------|-------------------:|
+| **Turn 1** | User request + system instructions | ~200 |
+| **Turn 1** | Generated HTML + CSS + JavaScript | ~8,800 |
+| **Turn 2** | Previous conversation resent + knowledge base + system reminder | ~500 |
+| **Turn 2** | Assistant response ("Yes") | ~1 |
+| **Turn 3** | Full context resent | ~2,000 |
+| **Additional reasoning** | Turn 1 Planning (1,000) + Turns 2–3 (700) | ~1,700 |
+| **Estimated Total** | Complete generation | **≈13,201 tokens** |
+
+## Why is it more efficient?
+
+While the underlying mechanism remains the same (resending context), the **Eco Mod** strategy reduces overhead by:
+
+- Generating the bulk of the code in a single, optimized pass (Turn 1).
+- Using minimal acknowledgments in intermediate turns (e.g., "Yes").
+- Streamlining internal reasoning processes.
+
+This results in a reduction of approximately **34%** in token consumption compared to the standard v1.2 workflow.
 
 > **Note**
 >
