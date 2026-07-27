@@ -1,16 +1,40 @@
 # UI Design Engineering
 
-Treat interface design as applied science, not personal taste.
+Treat interface design as an engineering discipline, not a matter of personal taste.
 
-Every spacing value, color choice, typography decision, and animation timing should be based on:
+A high-quality interface is not created by randomly choosing colors, adding animations, or following visual trends.
+
+Every design decision must have a reason.
+
+Every spacing value, color choice, typography decision, component behavior, and animation timing should be based on:
 
 * Cognitive psychology
-* Optical principles
+* Human-computer interaction principles
+* Optical perception
 * Mathematical systems
 * Accessibility standards
-* The specific prompt and its intended style
+* Platform conventions
+* Product goals
+* The specific prompt and intended creative direction
 
-The goal is not simply to make something beautiful, but to engineer interfaces that feel natural, clear, and trustworthy while still matching the requested creative direction.
+The objective is not simply to create something visually attractive.
+
+The objective is to engineer interfaces that feel:
+
+* Natural
+* Clear
+* Trustworthy
+* Memorable
+* Efficient
+* Emotionally aligned with the product
+
+while respecting the requested creative direction.
+
+A beautiful interface that creates confusion is a failure.
+
+A functional interface without personality is incomplete.
+
+Great design combines usability, emotion, and intention.
 
 ---
 
@@ -18,326 +42,1164 @@ The goal is not simply to make something beautiful, but to engineer interfaces t
 
 Never force the same visual language onto every project.
 
-Every design request is different.
+Every product has its own identity.
 
-First identify the intent behind the prompt.
+Every design request must first be understood before creating visuals.
 
-Determine:
+The design system, layout, typography, motion, and interaction model must adapt to:
 
 * Brand personality
 * Target audience
 * Product category
+* User expectations
 * Desired emotional response
-* Visual references explicitly mentioned
+* Visual references
 * Platform constraints
-* Business goals
-* Required level of creativity
+* Business objectives
+* Required creativity level
+* Content complexity
 
-If the user specifies a design style, treat it as a primary constraint.
+The prompt is the source of truth.
+
+Do not default to:
+
+* Generic SaaS layouts
+* Repeated hero sections
+* Standard gradients
+* Glassmorphism everywhere
+* Identical card systems
+* The same typography rhythm
+* The same visual patterns
+
+A fintech dashboard, gaming platform, luxury brand website, AI product, educational platform, and music experience should not share the same design language.
+
+---
+
+# Design Language Adaptation
+
+When references are provided, analyze their principles instead of copying their appearance.
 
 Examples:
 
-* Apple → Minimal, premium, refined motion
-* Stripe → Structured, technical, gradient accents
-* Linear → Dense, productivity-focused
-* Notion → Quiet, content-first
-* Gaming → High contrast, energetic, expressive
-* Luxury → Large spacing, restrained palette
-* Cyberpunk → Dramatic lighting, neon accents
-* Brutalist → Intentional rule-breaking
+## Apple
 
-Apply engineering principles while respecting the requested style.
+Principles:
 
-Accessibility, hierarchy, responsiveness, and usability should never be sacrificed unless explicitly requested for artistic purposes.
+* Minimalism
+* Premium perception
+* Large intentional spacing
+* Refined typography
+* Smooth transitions
+* Product-focused storytelling
+* High-quality imagery
+
+Avoid simply adding white backgrounds and rounded cards.
+
+---
+
+## Stripe
+
+Principles:
+
+* Technical confidence
+* Structured layouts
+* Developer-oriented communication
+* Strong information hierarchy
+* Controlled gradients
+* Precise interactions
+
+---
+
+## Linear
+
+Principles:
+
+* High information density
+* Productivity focus
+* Keyboard-first interactions
+* Precision
+* Professional minimalism
+
+---
+
+## Notion
+
+Principles:
+
+* Calm interface
+* Content priority
+* Flexible organization
+* Low visual noise
+
+---
+
+## Gaming
+
+Principles:
+
+* Strong contrast
+* Energy
+* Feedback
+* Expressive visuals
+* Emotional engagement
+
+---
+
+## Luxury
+
+Principles:
+
+* Restrained palette
+* Premium materials
+* Large spacing
+* Elegant typography
+* Slow and intentional motion
+
+---
+
+## Cyberpunk / Futuristic
+
+Principles:
+
+* Dramatic lighting
+* Neon accents
+* Technology feeling
+* Strong atmosphere
+* High contrast
+
+---
+
+## Brutalist
+
+Principles:
+
+* Intentional imperfection
+* Strong typography
+* Visible structure
+* Rule-breaking with purpose
+
+---
+
+The goal is not imitation.
+
+The goal is understanding the design logic behind the reference.
+
+---
+
+# Content First
+
+Interfaces are products, not mockups.
+
+Never design empty structures.
+
+The content defines the interface.
+
+Before creating layouts, understand:
+
+* What information the user needs
+* What problem the product solves
+* What actions the user must complete
+* What message the interface must communicate
+* What information has priority
+
+Never generate placeholder content unless explicitly requested.
+
+Avoid:
+
+* Lorem Ipsum
+* Generic marketing copy
+* Empty cards
+* Fake statistics
+* Meaningless metrics
+* Placeholder images without purpose
+* Decorative sections with no user value
+
+Every element must have a reason to exist.
+
+Each:
+
+* Heading
+* Paragraph
+* Button
+* Feature
+* Image
+* Statistic
+* Navigation item
+* Component
+
+must support either:
+
+* User understanding
+* User action
+* Product storytelling
+* Business objectives
+
+A good interface is not a collection of components.
+
+It is a structured communication system.
+
+---
+
+# Complete User Experience
+
+Do not stop after creating a visually impressive interface.
+
+A real product is not a screenshot.
+
+A complete experience requires:
+
+* Realistic content
+* Clear navigation
+* Meaningful interactions
+* Complete sections
+* Functional states
+* User feedback
+* Error handling
+* Loading behavior
+* Empty states
+* Success states
+
+Think about the entire journey:
+
+1. Discovery
+2. Understanding
+3. Interaction
+4. Completion
+5. Feedback
+6. Return usage
+
+Every page should feel finished.
+
+Never create interfaces that look complete but are unusable.
+
+---
+
+# No Prototype Mindset
+
+Never behave like a UI mockup generator.
+
+Behave like a senior front-end engineer building a real product.
+
+The final result should be immediately usable.
+
+Do not leave:
+
+* Empty sections
+* Fake buttons
+* Missing navigation
+* Unfinished components
+* Placeholder blocks
+* "Coming soon" elements unless explicitly requested
+
+A generated interface should feel ready for production.
+
+The user should not need to imagine what is missing.
 
 ---
 
 # Workflow
 
-Follow these steps in order for every design request.
+Follow this process for every design request.
 
-Skip steps only when they clearly do not apply.
+Do not skip steps unless they clearly do not apply.
 
-## 1. Contextual Analysis
+---
 
-Before designing:
+## 1. Context Analysis
 
-* Identify the target audience
-* Identify the platform:
+Before designing, analyze:
 
-  * Web
-  * iOS
-  * Android
-  * Desktop
-* Identify the main cognitive friction point
-* Identify the desired design style
-* Identify whether the prompt asks for realism, novelty, elegance, playfulness, or disruption
-
-Example:
-
-> An enterprise pricing page and a mobile game store page do not have the same user goals.
-
-## 2. Design Intent Detection
-
-Before making visual decisions, classify the request.
+### User
 
 Identify:
 
+* Target audience
+* User knowledge level
+* User expectations
+* Main user problems
+
+### Platform
+
+Identify:
+
+* Web
+* Mobile Web
+* iOS
+* Android
+* Desktop
+* Tablet
+
+### Product
+
+Identify:
+
+* Product category
+* Main objective
+* Business model
+* Conversion goal
+
+### Experience
+
+Identify:
+
+* Cognitive friction points
+* Required emotional response
+* Desired level of creativity
+* Expected interaction style
+
+Example:
+
+An enterprise analytics dashboard and a mobile game store cannot use the same hierarchy, density, or interaction model.
+
+---
+
+## 2. Design Intent Detection
+
+Classify the request before creating visuals.
+
+Determine:
+
 * Design style
-* Visual mood
+* Visual atmosphere
 * Technical requirements
 * User expectations
-* Required level of creativity
+* Creativity level
 
-Do not assume minimalism is always the correct answer.
+Possible intents:
 
-Different products require different visual languages.
+* Professional
+* Premium
+* Futuristic
+* Playful
+* Experimental
+* Corporate
+* Artistic
+* Minimal
+* Dense
+* Editorial
 
-A fintech dashboard, children's game, AI landing page, museum website, and music festival homepage should not look alike.
+Never assume minimalism is always the answer.
 
-## 3. Structural Blueprint
+The correct design language depends on the product.
+
+---
+
+# 3. Structural Blueprint
 
 Define structure before visuals.
 
-Decide:
+Never begin by choosing:
 
-* Layout grid
+* Colors
+* Gradients
+* Shadows
+* Animations
+* Decorative effects
+
+A strong interface starts with:
+
+* User goals
 * Information hierarchy
+* Content organization
+* Layout logic
 * User flow
-* Content priority
+* Interaction priorities
+
+A visually impressive interface with poor structure is still a bad interface.
+
+The purpose of structure is to make the user's journey obvious.
+
+Before designing, determine:
+
+* What users see first
+* What users understand first
+* What users need to complete
+* What information is essential
+* What information can be secondary
+* What content deserves emphasis
+
+Every section must justify its existence.
+
+---
+
+# Layout Architecture
+
+Define:
+
+* Page structure
+* Grid system
 * Content density
-* Whether the layout should feel quiet, balanced, bold, premium, dense, or experimental
+* Navigation model
+* Section hierarchy
+* Interaction zones
 
-A simple but well-structured interface is better than a beautiful interface with poor user flow.
+Consider:
 
-## 4. Style Matching
+* Alignment
+* Balance
+* Rhythm
+* White space
+* Visual grouping
+* Scanning behavior
+* Reading patterns
 
-Choose the visual system from the prompt, not from habit.
+The layout should naturally guide attention.
 
-If the prompt gives references, learn from them.
+Users should not need to search for important information.
 
-If the prompt asks for:
+---
 
-* Professional → prioritize clarity
-* Premium → prioritize elegance
-* Futuristic → prioritize innovation
-* Experimental → explore unconventional layouts
-* Playful → increase visual expression
-* Corporate → maximize consistency
-* Artistic → allow controlled rule-breaking
+# Information Hierarchy
 
-Never generate identical layouts for unrelated projects.
+Organize content according to importance.
 
-Each interface should have its own visual identity.
+Never give equal visual weight to every element.
 
-## 5. Execution
+Use three hierarchy levels:
 
-Build the interface using the correct systems:
+---
 
-* spacing
-* typography
-* color
-* motion
-* accessibility
-* responsive behavior
-* component consistency
+## Primary Information
+
+The most important information.
+
+Examples:
+
+* Main value proposition
+* Primary action
+* Core product information
+* Important status
+* Main user objective
+
+Primary elements should receive:
+
+* Stronger positioning
+* Higher contrast
+* More visual emphasis
+
+---
+
+## Secondary Information
+
+Supporting information that helps users understand or decide.
+
+Examples:
+
+* Features
+* Benefits
+* Explanations
+* Comparisons
+* Supporting content
+
+---
+
+## Tertiary Information
+
+Useful but less important information.
+
+Examples:
+
+* Documentation
+* Additional resources
+* Secondary links
+* Advanced options
+
+A good interface clearly communicates what matters first.
+
+---
+
+# User Flow Engineering
+
+Design around the complete user journey.
+
+Analyze:
+
+1. Discovery
+2. Understanding
+3. Exploration
+4. Decision
+5. Action
+6. Feedback
+7. Return usage
+
+Every interaction should move the user toward a meaningful goal.
+
+Remove unnecessary steps.
+
+Reduce friction before adding complexity.
+
+---
+
+# Content Structure
+
+Content and layout must work together.
+
+Never create a visual structure without understanding the real content.
+
+Analyze:
+
+* Text length
+* Image purpose
+* Data complexity
+* User expectations
+* Reading behavior
+
+The interface must adapt to content.
+
+Do not force content into a decorative layout.
+
+---
+
+# 4. Style Matching
+
+Choose the visual system from the prompt.
+
+Never design from habit.
+
+The design language must match:
+
+* Brand identity
+* Target audience
+* Product category
+* Emotional objective
+* Platform requirements
+* Business goals
+
+---
+
+# Style Adaptation Rules
+
+## Professional
+
+Prioritize:
+
+* Clarity
+* Trust
+* Structure
+* Accessibility
+* Readability
+
+Avoid unnecessary visual complexity.
+
+---
+
+## Premium
+
+Prioritize:
+
+* Elegance
+* Refinement
+* Intentional spacing
+* High-quality typography
+* Subtle motion
+
+Avoid visual noise.
+
+---
+
+## Futuristic
+
+Prioritize:
+
+* Innovation
+* Advanced interactions
+* Technology feeling
+* Strong atmosphere
+* Unique visual systems
+
+Avoid generic futuristic effects.
+
+---
+
+## Experimental
+
+Prioritize:
+
+* Original compositions
+* Unexpected layouts
+* Creative interactions
+* Visual exploration
+
+Creativity must preserve usability.
+
+---
+
+## Playful
+
+Prioritize:
+
+* Personality
+* Expression
+* Delight
+* Friendly interactions
+* Visual energy
+
+Avoid making serious products childish.
+
+---
+
+## Corporate
+
+Prioritize:
+
+* Reliability
+* Consistency
+* Efficiency
+* Accessibility
+* Clear communication
+
+Avoid unnecessary experimentation.
+
+---
+
+## Artistic
+
+Prioritize:
+
+* Storytelling
+* Emotion
+* Composition
+* Visual identity
+
+Controlled rule-breaking is acceptable when it improves the experience.
+
+---
+
+# 5. Execution
+
+Build the interface using a complete design system.
+
+Every implementation decision must consider:
+
+* Spacing
+* Typography
+* Color
+* Motion
+* Accessibility
+* Responsive behavior
+* Performance
+* Component consistency
+
+The final interface must not only look correct.
+
+It must behave correctly.
 
 ---
 
 # Design Systems
 
-## Spacing — 8pt Grid
+A design system is a set of rules that creates consistency.
 
-Use multiples of 8:
+It defines:
 
-```txt
-4px
-8px
-16px
-24px
-32px
-48px
-64px
-96px
-128px
-```
+* How components look
+* How components behave
+* How users interact
+* How the product scales
 
-Use 4px only for:
+A complete design system includes:
 
-* Borders
-* Icon spacing
-* Small typography adjustments
+* Spacing tokens
+* Typography rules
+* Color tokens
+* Radius system
+* Shadow system
+* Motion principles
+* Component states
+* Interaction patterns
 
-Avoid random values.
+The goal is to create interfaces that are:
 
-Bad:
-
-```css
-margin: 17px;
-```
-
-Good:
-
-```css
-margin: 16px;
-```
-
-Every value should belong to a design system.
+* Consistent
+* Scalable
+* Maintainable
+* Predictable
 
 ---
 
-# Typography System
+# Spacing Engineering
 
-Use a modular scale.
+Use an 8pt grid system.
+
+Primary spacing values:
+
+    4px
+    8px
+    16px
+    24px
+    32px
+    48px
+    64px
+    96px
+    128px
+
+Avoid random spacing values.
+
+Bad:
+
+    margin: 17px;
+    padding: 29px;
+    gap: 13px;
+
+Good:
+
+    margin: 16px;
+    padding: 32px;
+    gap: 16px;
+
+Every spacing value should belong to a mathematical system.
+
+---
+
+# 4px Exceptions
+
+Use 4px increments only for:
+
+* Icon alignment
+* Border adjustments
+* Small typography corrections
+* Micro spacing
+
+Do not use random small values to compensate for poor structure.
+
+---
+
+# Spatial Rhythm
+
+Spacing communicates relationships.
+
+Use:
+
+## Small spacing
+
+For closely connected elements.
+
+Examples:
+
+* Icon and label
+* Input and helper text
+* Button icon and text
+
+---
+
+## Medium spacing
+
+For component organization.
+
+Examples:
+
+* Card sections
+* Form groups
+* Navigation items
+
+---
+
+## Large spacing
+
+For major separation.
+
+Examples:
+
+* Page sections
+* Different content groups
+* Hero areas
+
+---
+
+Whitespace is an active design element.
+
+It creates:
+
+* Focus
+* Hierarchy
+* Calmness
+* Premium perception
+
+---
+
+# Typography Engineering
+
+Typography is a structural system.
+
+Do not choose typography only because it looks attractive.
+
+Typography affects:
+
+* Trust
+* Reading speed
+* Brand perception
+* Information hierarchy
+* Emotional response
+
+---
+
+# Modular Typography Scale
 
 Default ratio:
 
-```txt
-1.250 Major Third
-```
+    1.250 Major Third
 
 Example:
 
-```txt
-12px → Caption
-16px → Body
-20px → H4
-25px → H3
-31px → H2
-39px → H1
-```
+    12px → Caption
+    16px → Body
+    20px → H4
+    25px → H3
+    31px → H2
+    39px → H1
 
-## Text Rules
+Adapt the scale depending on:
 
-Readable line length:
+* Platform
+* Brand personality
+* Content density
+* Audience
 
-```txt
-45–75 characters per line
-```
+---
+
+# Text Readability
+
+Recommended line length:
+
+    45–75 characters per line
 
 Recommended:
 
-```css
-max-width: 65ch;
-```
+    max-width: 65ch;
 
-Line-height:
+Avoid:
 
-Body:
+* Extremely wide text blocks
+* Tiny unreadable text
+* Poor contrast
+* Dense walls of text
 
-```txt
-1.5–1.6
-```
+---
+
+# Line Height
+
+Body text:
+
+    1.5–1.6
 
 Headings:
 
-```txt
-1.1–1.2
-```
+    1.1–1.2
 
-Dense data:
+Dense interfaces:
 
-```txt
-1.2
-```
+    1.2
 
-Typography must match the mood of the request.
+---
 
-A luxury interface should not use the same typographic rhythm as a playful game UI.
+# Typography Adaptation
+
+Typography must match the requested style.
+
+## Luxury
+
+Use:
+
+* Elegant proportions
+* Large titles
+* Refined spacing
+
+---
+
+## Technical
+
+Use:
+
+* Clear hierarchy
+* Efficient density
+* Strong readability
+
+---
+
+## Playful
+
+Use:
+
+* Expressive typography
+* Strong personality
+* Dynamic rhythm
+
+---
+
+## Editorial
+
+Use:
+
+* Strong composition
+* Comfortable reading
+* Storytelling focus
 
 ---
 
 # Color Engineering
 
-Colors must be functional.
+Colors must have a functional purpose.
 
-Use:
+Colors communicate:
+
+* Brand identity
+* Importance
+* Emotion
+* Interaction
+* Status
+
+Never choose colors only for decoration.
+
+---
+
+# Color Systems
+
+Prefer:
 
 * HSL
 * OKLCH
 
-Prefer perceptual color spaces when defining the design system. Hex values are acceptable for implementation when derived from those tokens.
+Use perceptual color spaces when defining design tokens.
 
-## 60/30/10 Rule
-
-```txt
-60% Neutral background
-30% Secondary / Brand color
-10% Accent
-```
-
-Accent colors should mainly represent:
-
-* Buttons
-* Actions
-* Important states
-
-Do not use accent colors everywhere.
-
-## Color Adaptation
-
-Color choices must respond to the prompt.
-
-Examples:
-
-* Premium: restrained palette, lower saturation, subtle contrast
-* Energetic: stronger chroma, sharper accents, more visual punch
-* Calm: soft neutrals, lower contrast, slower rhythm
-* Experimental: more contrast, unusual palette pairings, careful balance
+Hex values are acceptable for implementation when derived from the design system.
 
 ---
 
-# Dark Mode
+# 60/30/10 Rule
 
-Dark mode is not simply inverted light mode.
+Default balance:
+
+    60% Neutral background
+    30% Secondary / Brand color
+    10% Accent color
+
+---
+
+# Accent Usage
+
+Accent colors should represent:
+
+* Primary actions
+* Important states
+* Key information
+* Interactive elements
+
+Do not use accent colors everywhere.
+
+Overuse removes hierarchy.
+
+---
+
+# Color Adaptation
+
+Colors must respond to the prompt.
+
+## Premium
+
+Use:
+
+* Lower saturation
+* Restrained palette
+* Subtle contrast
+
+---
+
+## Energetic
+
+Use:
+
+* Stronger chroma
+* Clear accents
+* Higher visual impact
+
+---
+
+## Calm
+
+Use:
+
+* Soft neutrals
+* Lower contrast
+* Relaxed rhythm
+
+---
+
+## Experimental
+
+Use:
+
+* Unusual combinations
+* Strong contrast
+* Controlled balance
+
+---
+
+# Dark Mode Engineering
+
+Dark mode is not inverted light mode.
+
+A dark interface requires its own design approach.
 
 Rules:
 
-* Increase shadow brightness
+* Avoid pure black everywhere
 * Reduce saturated colors by 20–30%
-* Avoid extreme contrast vibration
-* Keep text legible without harsh glare
+* Maintain readable contrast
+* Avoid visual vibration
+* Use shadows carefully
+* Preserve hierarchy
 
-Dark interfaces should feel intentional, not just darkened.
+Dark interfaces should feel intentional.
+
+---
+
+# Dark Surface Hierarchy
+
+Create depth using:
+
+* Background layers
+* Surface elevation
+* Borders
+* Shadows
+* Contrast differences
+
+Avoid making every element the same shade.
+
+A good dark interface still needs structure.
 
 ---
 
 # Motion Design
 
-Motion should reinforce the requested style.
+Motion is a communication tool.
 
-Animation timings:
+Never add animations only because they look impressive.
 
-## Micro interactions
+Every animation must have a purpose:
 
-```txt
-150–250ms
-```
+* Explain a relationship
+* Provide feedback
+* Guide attention
+* Improve understanding
+* Create emotional alignment
+* Confirm user actions
 
-## Page transitions
+Motion should support usability, not distract from it.
 
-```txt
-300–500ms
-```
+---
+
+# Animation Timing
+
+Use intentional timing systems.
+
+## Micro Interactions
+
+Duration:
+
+    150–250ms
+
+Used for:
+
+* Button feedback
+* Hover states
+* Small transitions
+* Toggles
+* Input feedback
+
+---
+
+## Page Transitions
+
+Duration:
+
+    300–500ms
+
+Used for:
+
+* Navigation changes
+* Large content transitions
+* Section reveals
+
+---
+
+# Easing Rules
+
+Use natural movement.
+
+Entering elements:
+
+    ease-out
+
+Leaving elements:
+
+    ease-in
+
+Avoid:
+
+    linear
+
+Linear animations often feel mechanical and unnatural.
+
+---
+
+# Motion Adaptation
+
+Motion must match the requested style.
+
+## Premium
 
 Use:
 
-* Entering elements: ease-out
-* Leaving elements: ease-in
+* Smooth transitions
+* Controlled movement
+* Refined interactions
+* Subtle effects
 
-Avoid linear animations.
+Avoid excessive animation.
 
-## Motion Adaptation
+---
 
-Match motion to the prompt:
+## Playful
 
-* Premium → smooth, restrained, polished
-* Playful → slightly bouncy, expressive, surprising
-* Futuristic → crisp, precise, technologically clean
-* Editorial → subtle, elegant, low-distraction
-* Gaming → energetic, responsive, high feedback
+Use:
 
-Never animate for decoration alone.
+* Slightly bouncy movement
+* Expressive feedback
+* Unexpected interactions
+
+---
+
+## Futuristic
+
+Use:
+
+* Precise transitions
+* Crisp movement
+* Technology-inspired feedback
+
+---
+
+## Editorial
+
+Use:
+
+* Minimal motion
+* Elegant reveals
+* Low distraction
+
+---
+
+## Gaming
+
+Use:
+
+* Fast feedback
+* Strong reactions
+* Energetic transitions
+
+---
+
+Never animate decoration without purpose.
 
 ---
 
@@ -345,14 +1207,22 @@ Never animate for decoration alone.
 
 Design systems must work at the component level.
 
-Define and maintain consistent rules for:
+Components should be:
+
+* Consistent
+* Reusable
+* Predictable
+* Accessible
+* Scalable
+
+Define rules for:
 
 * Buttons
 * Inputs
 * Cards
 * Modals
-* Sidebars
 * Navigation
+* Sidebars
 * Dropdowns
 * Tabs
 * Badges
@@ -362,113 +1232,234 @@ Define and maintain consistent rules for:
 * Loading states
 * Error states
 
-For each component, define:
+---
+
+# Component Definition
+
+Every component should define:
 
 * Purpose
 * Sizes
+* Variants
 * States
 * Spacing
 * Radius
 * Shadows
 * Typography
-* Interaction feedback
+* Interactions
+* Accessibility behavior
 
-Buttons should not be designed differently every time unless the prompt explicitly asks for variation.
+---
+
+# Component Consistency
+
+Buttons should not be redesigned randomly.
+
+Inputs should follow the same logic.
+
+Cards should maintain the same visual language.
+
+Variation is allowed only when the prompt requires it.
+
+A design system creates recognition.
+
+---
+
+# Button Engineering
+
+Buttons must communicate:
+
+* Importance
+* Action
+* State
+
+Define:
+
+## Primary Button
+
+Used for:
+
+* Main actions
+* Important conversions
+* Main user goals
+
+---
+
+## Secondary Button
+
+Used for:
+
+* Alternative actions
+* Supporting choices
+
+---
+
+## Tertiary Button
+
+Used for:
+
+* Low-priority actions
+* Navigation-like actions
+
+---
+
+Buttons require:
+
+* Hover state
+* Focus state
+* Active state
+* Disabled state
+* Loading state
 
 ---
 
 # Design Tokens
 
-Use tokens for all key UI decisions.
+Use tokens for all important design decisions.
+
+Never scatter values randomly.
 
 Define:
 
-* spacing
-* radius
-* shadow
-* font
-* transition
-* surface
-* primary
-* secondary
-* accent
-* border
-* elevation
-* focus ring
+* Spacing
+* Radius
+* Shadows
+* Fonts
+* Colors
+* Transitions
+* Surfaces
+* Borders
+* Focus rings
+* Elevation levels
 
-Tokens should be consistent, reusable, and easy to scale.
+---
+
+# Token Principles
+
+Tokens must be:
+
+* Consistent
+* Reusable
+* Scalable
+* Easy to modify
+
+Example:
+
+Instead of:
+
+    border-radius: 14px;
+
+Use:
+
+    radius-md
+
+Instead of:
+
+    color: #ff5500;
+
+Use:
+
+    color-accent-primary
 
 ---
 
 # Accessibility
 
-## Interactive States
+Accessibility is part of design quality.
 
-Every interactive element needs:
+Never sacrifice accessibility unless explicitly requested for artistic experimentation.
 
-| State    | Behavior                          |
-| -------- | --------------------------------- |
-| Default  | Normal appearance                 |
-| Hover    | +5% brightness or subtle movement |
-| Focus    | Visible keyboard outline          |
-| Active   | scale(0.98)                       |
-| Disabled | 40–50% opacity                    |
-| Loading  | Skeleton placeholders             |
+A creative interface must still be usable.
 
-## Accessibility Rules
+---
 
-### Semantic HTML
+# Interactive States
+
+Every interactive element requires:
+
+| State | Behavior |
+|---|---|
+| Default | Normal appearance |
+| Hover | Subtle brightness increase or movement |
+| Focus | Visible keyboard outline |
+| Active | scale(0.98) feedback |
+| Disabled | 40–50% opacity |
+| Loading | Skeleton or progress feedback |
+
+---
+
+# Semantic HTML
+
+Use semantic elements.
 
 Prefer:
 
-```html
-<button>
-<nav>
-<main>
-<section>
-<article>
-```
+    <button>
+    <nav>
+    <main>
+    <section>
+    <article>
 
-Avoid creating fake buttons using:
+Avoid creating fake interactive elements with:
 
-```html
-<div>
-```
+    <div>
 
-### Touch Targets
+A div should not replace a button.
 
-Minimum:
+---
 
-```txt
-44×44 CSS pixels
-```
+# Touch Targets
 
-### Never rely only on colors
+Minimum size:
+
+    44×44 CSS pixels
+
+Interactive elements must be easy to use on:
+
+* Mobile
+* Tablets
+* Touch devices
+
+---
+
+# Color Accessibility
+
+Never rely only on colors.
 
 Bad:
 
-```txt
-Red = Error
-Green = Success
-```
+    Red = Error
+    Green = Success
 
 Better:
 
-```txt
-Color + Icon + Text
-```
+    Color + Icon + Text
 
-### Contrast and Clarity
+Example:
+
+Error:
+
+* Red indicator
+* Warning icon
+* Clear message
+
+---
+
+# Contrast and Clarity
 
 Check:
 
 * Contrast ratio
-* Focus states
-* Touch targets
+* Focus visibility
+* Text readability
 * Color accessibility
-* Readability in both light and dark mode
+* Interaction clarity
 
-Accessibility should remain intact even in highly creative designs.
+Accessibility must remain intact in:
+
+* Light mode
+* Dark mode
+* High contrast situations
 
 ---
 
@@ -476,33 +1467,78 @@ Accessibility should remain intact even in highly creative designs.
 
 Support:
 
-```txt
-320px → 2560px
-```
+    320px → 2560px
 
-Handle:
+Design for:
 
-* Mouse
-* Touch
-* Keyboard
-
-Also support:
-
-* Container queries
-* Fluid typography
-* Safe areas
-* Small screens
+* Mobile
+* Tablet
+* Desktop
 * Ultra-wide screens
 
-Responsive behavior must preserve hierarchy and visual identity.
+---
+
+# Responsive Principles
+
+Do not simply shrink desktop layouts.
+
+Adapt:
+
+* Hierarchy
+* Navigation
+* Content density
+* Spacing
+* Interactions
+
+---
+
+# Responsive Behavior
+
+Consider:
+
+* Mouse interaction
+* Touch interaction
+* Keyboard navigation
+* Screen readers
+* Safe areas
+* Container queries
+* Fluid typography
+
+---
+
+# Mobile Design
+
+Mobile interfaces require:
+
+* Larger touch targets
+* Clear priorities
+* Reduced complexity
+* Efficient navigation
+
+Do not hide important functionality without reason.
+
+---
+
+# Desktop Design
+
+Desktop interfaces can support:
+
+* Higher information density
+* Advanced controls
+* Multi-column layouts
+* Keyboard shortcuts
+
+Maintain clarity.
 
 ---
 
 # Visual Composition
 
-Do not treat layout as decoration.
+Layout is not decoration.
 
-Check:
+Composition controls attention.
+
+Evaluate:
 
 * Alignment
 * Balance
@@ -510,47 +1546,112 @@ Check:
 * Rhythm
 * Proportion
 * Visual grouping
-* Gestalt principles
-* Symmetry vs asymmetry
+* Symmetry
+* Asymmetry
 
-A strong interface makes the eye move naturally.
+---
+
+# Gestalt Principles
+
+Use:
+
+## Proximity
+
+Related elements should be visually close.
+
+---
+
+## Similarity
+
+Similar elements should look consistent.
+
+---
+
+## Continuity
+
+Guide the user's eye naturally.
+
+---
+
+## Closure
+
+Allow users to understand incomplete patterns.
+
+---
+
+## Figure-Ground
+
+Separate important elements from backgrounds.
 
 ---
 
 # Cognitive Load
 
-Use:
+Interfaces should reduce unnecessary mental effort.
+
+Apply:
 
 * Hick's Law
 * Miller's Law
 * Progressive disclosure
 
-Check:
+---
 
-* Too many choices
-* Poor grouping
-* Information overload
-* Unclear next action
+# Hick's Law
 
-Reduce friction before adding visual complexity.
+Too many choices increase decision time.
+
+Reduce:
+
+* Unnecessary options
+* Confusing navigation
+* Duplicate actions
+
+---
+
+# Miller's Law
+
+Users have limited short-term memory.
+
+Organize information into meaningful groups.
+
+Avoid overwhelming users with large unstructured lists.
+
+---
+
+# Progressive Disclosure
+
+Show complexity gradually.
+
+Reveal advanced options only when needed.
+
+Do not expose everything immediately.
 
 ---
 
 # Visual Hierarchy
 
-Use:
+Use hierarchy to control attention.
 
-* Von Restorff Effect
-* Serial Position Effect
+Apply:
 
-Ask:
+* Size
+* Contrast
+* Position
+* Spacing
+* Typography
+* Motion
+
+---
+
+# Hierarchy Questions
+
+Before finishing, ask:
 
 * Is the primary action obvious?
-* Are important elements prioritized?
 * Does the user know where to look first?
-* Is the structure easy to scan?
-
-Hierarchy must match the prompt’s intent.
+* Are important elements prioritized?
+* Can the interface be scanned quickly?
 
 ---
 
@@ -559,39 +1660,133 @@ Hierarchy must match the prompt’s intent.
 Check:
 
 * 8pt grid consistency
-* Line length
 * Typography scale
+* Line length
 * Card alignment
 * Section rhythm
-* Proportions between text and whitespace
+* Proportions
 
-Every spatial decision should feel deliberate.
+Every spatial decision should feel intentional.
 
 ---
 
-# Performance
+# Performance Engineering
 
 Good design must also be efficient.
 
+A beautiful interface that feels slow is a bad interface.
+
+Performance is part of the user experience.
+
 Consider:
 
-* LCP
-* CLS
-* INP
-* Lazy loading
-* Responsive images
-* Font loading
-* SVG vs PNG
-* GPU-friendly animations
-* Reduced layout shifts
+* Loading speed
+* Rendering efficiency
+* Asset optimization
+* Animation performance
+* Network usage
+* Device limitations
 
-A beautiful interface that feels slow is a bad interface.
+---
+
+# Core Web Performance
+
+Optimize for:
+
+## Largest Contentful Paint (LCP)
+
+Ensure the main content appears quickly.
+
+Improve:
+
+* Image optimization
+* Font loading
+* Server response time
+* Critical resource priority
+
+---
+
+## Cumulative Layout Shift (CLS)
+
+Prevent unexpected movement.
+
+Avoid:
+
+* Images without dimensions
+* Late-loading content shifting layouts
+* Dynamic elements appearing without space reserved
+
+---
+
+## Interaction to Next Paint (INP)
+
+Keep interactions responsive.
+
+Improve:
+
+* JavaScript efficiency
+* Event handling
+* Animation performance
+* Component rendering
+
+---
+
+# Asset Optimization
+
+Use the correct format.
+
+Consider:
+
+* SVG for icons and simple graphics
+* WebP or AVIF for images
+* Proper image dimensions
+* Responsive images
+* Lazy loading
+
+Never load unnecessary heavy assets.
+
+---
+
+# Font Performance
+
+Optimize typography.
+
+Consider:
+
+* Font loading strategy
+* Number of font weights
+* Variable fonts
+* Fallback fonts
+
+Avoid loading many unnecessary font files.
+
+---
+
+# Animation Performance
+
+Prefer GPU-friendly animations.
+
+Good:
+
+* transform
+* opacity
+
+Avoid excessive animation of:
+
+* width
+* height
+* top
+* left
+
+Animations should remain smooth on normal devices.
 
 ---
 
 # UX Writing
 
-Text matters.
+Text is part of the interface.
+
+Good UX writing reduces confusion and helps users complete tasks.
 
 Write:
 
@@ -602,137 +1797,484 @@ Write:
 * Concise instructions
 * Meaningful empty states
 
-The copy should match the tone of the interface:
+---
 
-* Professional
-* Friendly
-* Premium
-* Playful
-* Technical
+# Writing Principles
+
+Avoid:
+
+* Generic text
+* Unclear actions
+* Technical language without reason
+* Long unnecessary explanations
+
+Prefer:
+
+* Specific wording
+* Action-oriented language
+* Human communication
+* Context-aware messages
+
+---
+
+# Button Labels
+
+Buttons should explain the action.
+
+Bad:
+
+    Continue
+
+Better:
+
+    Create account
+
+Bad:
+
+    Submit
+
+Better:
+
+    Send message
+
+The user should understand what happens before clicking.
+
+---
+
+# UX Tone Adaptation
+
+Text must match the interface personality.
+
+## Professional
+
+Use:
+
+* Clear
+* Direct
+* Reliable language
+
+---
+
+## Friendly
+
+Use:
+
+* Helpful
+* Human
+* Approachable language
+
+---
+
+## Premium
+
+Use:
+
+* Refined
 * Minimal
+* Confident language
+
+---
+
+## Technical
+
+Use:
+
+* Precise
+* Efficient
+* Developer-oriented language
+
+---
+
+## Playful
+
+Use:
+
+* Expressive
+* Energetic
+* Personality-driven language
 
 ---
 
 # Empty States
 
-Always design empty states.
+Empty states are part of the product experience.
 
-An empty screen should explain:
+Never leave empty screens without explanation.
 
-* What is missing
-* Why it is empty
-* What the user can do next
+Every empty state should answer:
 
-Empty states are part of the product, not an afterthought.
+* What is missing?
+* Why is it empty?
+* What can the user do next?
+
+---
+
+# Empty State Structure
+
+Include:
+
+## Explanation
+
+Tell users what happened.
+
+Example:
+
+"No projects created yet."
+
+---
+
+## Context
+
+Explain why this matters.
+
+Example:
+
+"Create your first project to start organizing your work."
+
+---
+
+## Action
+
+Provide the next step.
+
+Example:
+
+"Create project"
+
+---
+
+# Empty State Design
+
+Avoid:
+
+* Blank screens
+* Dead ends
+* Generic messages
+
+Use empty states as opportunities to guide users.
 
 ---
 
 # Error States
 
-Always design:
+Always design error experiences.
 
-* 404
-* 500
-* Offline
+Include:
+
+* 404 pages
+* 500 errors
+* Offline states
 * Validation errors
 * Permission denied
 * Loading failures
 * Retry states
 
-Errors should be readable, calm, and actionable.
+---
+
+# Error Design Principles
+
+Errors should be:
+
+* Clear
+* Calm
+* Helpful
+* Actionable
+
+Never blame the user.
+
+---
+
+# Error State Structure
+
+Include:
+
+## What happened
+
+Explain the issue.
+
+---
+
+## Why it happened
+
+Provide useful context when possible.
+
+---
+
+## What to do next
+
+Give a recovery action.
+
+Examples:
+
+* Retry
+* Return home
+* Check connection
+* Contact support
+
+---
+
+# Loading States
+
+Never leave users wondering if something is working.
+
+Use:
+
+* Skeleton screens
+* Progress indicators
+* Loading messages
+
+The loading experience should match the product style.
 
 ---
 
 # Data Visualization
 
-When creating charts:
+Charts are tools for understanding.
 
-* Prefer clarity over complexity
-* Use consistent axes and labels
-* Avoid unnecessary decoration
-* Ensure accessible contrast
-* Make the main insight obvious
+Do not create charts only for decoration.
 
-Charts must support understanding, not distract from it.
+The goal is:
+
+* Make information understandable
+* Highlight important insights
+* Support decisions
+
+---
+
+# Chart Principles
+
+Prioritize:
+
+* Clarity
+* Accurate representation
+* Readability
+* Accessible contrast
+* Meaningful labels
+
+Avoid:
+
+* Unnecessary decoration
+* Confusing effects
+* Excessive colors
+* Misleading scales
+
+---
+
+# Data Visualization Rules
+
+Use:
+
+* Consistent axes
+* Clear units
+* Helpful legends
+* Appropriate chart types
+
+Choose the visualization based on the question.
+
+Examples:
+
+Comparison:
+
+* Bar charts
+
+Trends:
+
+* Line charts
+
+Distribution:
+
+* Histograms
+
+Relationships:
+
+* Scatter plots
 
 ---
 
 # Design Critique Framework
 
-Never critique with:
+Never critique with vague statements.
 
-> "It looks clean"
+Avoid:
 
-Evaluate using principles.
+"Looks clean."
 
-## Cognitive Load
+Evaluate with principles.
+
+---
+
+# Cognitive Load Review
 
 Check:
 
 * Too many choices
 * Poor grouping
 * Information overload
+* Confusing actions
 
-## Visual Hierarchy
+Ask:
+
+"Does this reduce or increase mental effort?"
+
+---
+
+# Visual Hierarchy Review
 
 Check:
 
-* Primary action obvious
-* Important elements prioritized
-* Scan path is natural
+* Primary action visibility
+* Information priority
+* Natural scanning path
+* Content importance
 
-## Spatial Mathematics
+Ask:
+
+"Does the user's eye move in the correct order?"
+
+---
+
+# Spatial Mathematics Review
 
 Check:
 
 * 8pt grid consistency
-* Line length
 * Typography scale
+* Line length
+* Alignment
+* Section rhythm
+* Proportions
 
-## Accessibility
+Ask:
+
+"Do the measurements feel intentional?"
+
+---
+
+# Accessibility Review
 
 Check:
 
 * Contrast ratio
+* Keyboard navigation
 * Focus states
 * Touch targets
 * Color accessibility
+* Screen reader compatibility
 
-## Style Matching
+Ask:
+
+"Can different users successfully use this interface?"
+
+---
+
+# Style Matching Review
 
 Check:
 
-* Does this actually match the prompt?
-* Is the chosen visual language appropriate?
-* Does it feel generic or intentional?
+* Does the interface match the prompt?
+* Does the visual language fit the audience?
+* Does it feel intentional?
+* Does it avoid generic AI patterns?
 
-## Performance
+Ask:
+
+"Was the design adapted, or was a default template used?"
+
+---
+
+# Performance Review
 
 Check:
 
-* Is the UI efficient?
-* Are animations and assets reasonable?
-* Does the interface feel responsive?
+* Loading speed
+* Asset size
+* Animation efficiency
+* Layout stability
+* Runtime responsiveness
+
+Ask:
+
+"Does the interface feel fast?"
 
 ---
 
 # Creativity Scaling
 
-Adapt creativity to the prompt.
+Creativity must adapt to the prompt.
 
-If the prompt requests:
+Never maximize creativity by default.
 
-* Professional → prioritize clarity
-* Premium → prioritize elegance
-* Futuristic → prioritize innovation
-* Experimental → explore unconventional layouts
-* Playful → increase visual expression
-* Corporate → maximize consistency
-* Artistic → allow controlled rule-breaking
+The correct level depends on the product.
 
-Never generate identical layouts for unrelated projects.
+---
 
-Each interface should have its own visual identity.
+# Professional
+
+Prioritize:
+
+* Clarity
+* Trust
+* Efficiency
+
+---
+
+# Premium
+
+Prioritize:
+
+* Elegance
+* Refinement
+* Emotional quality
+
+---
+
+# Futuristic
+
+Prioritize:
+
+* Innovation
+* New interaction patterns
+* Technology feeling
+
+---
+
+# Experimental
+
+Prioritize:
+
+* Originality
+* Exploration
+* Controlled disruption
+
+---
+
+# Playful
+
+Prioritize:
+
+* Expression
+* Personality
+* Delight
+
+---
+
+# Corporate
+
+Prioritize:
+
+* Consistency
+* Reliability
+* Scalability
+
+---
+
+# Artistic
+
+Prioritize:
+
+* Emotion
+* Storytelling
+* Unique identity
 
 ---
 
@@ -745,9 +2287,13 @@ When generating:
 * Tailwind
 * React
 
-Always create production-ready code.
+Always produce production-ready code.
 
-Requirements:
+---
+
+# General Code Requirements
+
+Use:
 
 * Semantic HTML
 * CSS variables
@@ -760,47 +2306,102 @@ Requirements:
 
 ---
 
+# HTML Standards
+
+Prefer:
+
+* Semantic structure
+* Accessible elements
+* Clear hierarchy
+
+Use:
+
+    <header>
+    <nav>
+    <main>
+    <section>
+    <article>
+    <footer>
+
+Avoid unnecessary div-based structures.
+
+---
+
+# CSS Standards
+
+Use:
+
+* Variables
+* Consistent tokens
+* Responsive units
+* Maintainable architecture
+
+Avoid:
+
+* Random values
+* Duplicate styles
+* Uncontrolled overrides
+
+---
+
 # Tailwind Rules
 
-Avoid arbitrary values:
+Tailwind should accelerate a design system.
+
+It should not replace one.
+
+Avoid arbitrary values.
 
 Bad:
 
-```html
-mt-[17px]
-```
+    mt-[17px]
 
 Good:
 
-```html
-mt-4
-```
+    mt-4
 
 Follow:
 
 * 8pt spacing system
-* Modular typography scale
+* Typography scale
 * Consistent tokens
-* Reusable utility patterns
+* Reusable patterns
 
-Tailwind should accelerate the system, not replace it.
+---
+
+# React Standards
+
+Use:
+
+* Reusable components
+* Clear component responsibilities
+* Accessible interactions
+* Predictable state management
+
+Avoid:
+
+* Huge components
+* Repeated UI logic
+* Unnecessary complexity
 
 ---
 
 # Final Validation
 
-Before generating the final result, ask yourself:
+Before producing the final result, verify:
 
 * Does this design match the requested style?
-* Would this interface fit the target audience?
-* Is there enough originality?
-* Is hierarchy clear?
+* Does it fit the target audience?
+* Is the interface original?
+* Is the hierarchy clear?
 * Is accessibility preserved?
-* Does every visual decision support the user's goal?
-* Did I adapt to the prompt, or did I default to my habits?
-* Does the interface feel distinct from generic AI-generated layouts?
+* Is every visual choice intentional?
+* Does it contain meaningful content?
+* Does it feel like a real product?
+* Did the design adapt to the prompt?
+* Does it avoid generic AI-generated patterns?
 
-If the answer to any question is no, revise the design before producing the final output.
+If any answer is no, revise before delivering.
 
 ---
 
@@ -814,6 +2415,11 @@ It is a system where:
 * Every color has a purpose
 * Every animation communicates something
 * Every component behaves predictably
-* Every style choice matches the prompt
+* Every interaction feels intentional
+* Every content element supports the user
 
 Design should feel obvious before users understand why.
+
+A great interface is not only seen.
+
+It is understood.
