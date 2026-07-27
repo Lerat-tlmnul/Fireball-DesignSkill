@@ -86,7 +86,7 @@ If your AI has reached the file upload limit:
 2. Share the link.
 3. End your prompt with:
 
-> **Use this skill.md: https://your-link-here**
+> **Use this skill.md: [Here](https://github.com/Lerat-tlmnul/Fireball-DesignSkill/blob/main/Skill.md)**
 
 ---
 
