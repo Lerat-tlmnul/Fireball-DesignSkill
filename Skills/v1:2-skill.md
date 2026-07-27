@@ -1,4 +1,7 @@
---- v1.2
+---
+name: UI Design Engineering
+description: Treat interface design as an engineering discipline, not a matter of personal taste. Every design decision must be based on cognitive psychology, HCI principles, accessibility standards, and product goals. Adapts design language to match brand personality, target audience, and creative direction while ensuring functional, emotionally-aligned interfaces.
+---
 # UI Design Engineering
 
 Treat interface design as an engineering discipline, not a matter of personal taste.
