@@ -1,0 +1,819 @@
+# UI Design Engineering
+
+Treat interface design as applied science, not personal taste.
+
+Every spacing value, color choice, typography decision, and animation timing should be based on:
+
+* Cognitive psychology
+* Optical principles
+* Mathematical systems
+* Accessibility standards
+* The specific prompt and its intended style
+
+The goal is not simply to make something beautiful, but to engineer interfaces that feel natural, clear, and trustworthy while still matching the requested creative direction.
+
+---
+
+# Core Principle: Adapt to the Prompt
+
+Never force the same visual language onto every project.
+
+Every design request is different.
+
+First identify the intent behind the prompt.
+
+Determine:
+
+* Brand personality
+* Target audience
+* Product category
+* Desired emotional response
+* Visual references explicitly mentioned
+* Platform constraints
+* Business goals
+* Required level of creativity
+
+If the user specifies a design style, treat it as a primary constraint.
+
+Examples:
+
+* Apple → Minimal, premium, refined motion
+* Stripe → Structured, technical, gradient accents
+* Linear → Dense, productivity-focused
+* Notion → Quiet, content-first
+* Gaming → High contrast, energetic, expressive
+* Luxury → Large spacing, restrained palette
+* Cyberpunk → Dramatic lighting, neon accents
+* Brutalist → Intentional rule-breaking
+
+Apply engineering principles while respecting the requested style.
+
+Accessibility, hierarchy, responsiveness, and usability should never be sacrificed unless explicitly requested for artistic purposes.
+
+---
+
+# Workflow
+
+Follow these steps in order for every design request.
+
+Skip steps only when they clearly do not apply.
+
+## 1. Contextual Analysis
+
+Before designing:
+
+* Identify the target audience
+* Identify the platform:
+
+  * Web
+  * iOS
+  * Android
+  * Desktop
+* Identify the main cognitive friction point
+* Identify the desired design style
+* Identify whether the prompt asks for realism, novelty, elegance, playfulness, or disruption
+
+Example:
+
+> An enterprise pricing page and a mobile game store page do not have the same user goals.
+
+## 2. Design Intent Detection
+
+Before making visual decisions, classify the request.
+
+Identify:
+
+* Design style
+* Visual mood
+* Technical requirements
+* User expectations
+* Required level of creativity
+
+Do not assume minimalism is always the correct answer.
+
+Different products require different visual languages.
+
+A fintech dashboard, children's game, AI landing page, museum website, and music festival homepage should not look alike.
+
+## 3. Structural Blueprint
+
+Define structure before visuals.
+
+Decide:
+
+* Layout grid
+* Information hierarchy
+* User flow
+* Content priority
+* Content density
+* Whether the layout should feel quiet, balanced, bold, premium, dense, or experimental
+
+A simple but well-structured interface is better than a beautiful interface with poor user flow.
+
+## 4. Style Matching
+
+Choose the visual system from the prompt, not from habit.
+
+If the prompt gives references, learn from them.
+
+If the prompt asks for:
+
+* Professional → prioritize clarity
+* Premium → prioritize elegance
+* Futuristic → prioritize innovation
+* Experimental → explore unconventional layouts
+* Playful → increase visual expression
+* Corporate → maximize consistency
+* Artistic → allow controlled rule-breaking
+
+Never generate identical layouts for unrelated projects.
+
+Each interface should have its own visual identity.
+
+## 5. Execution
+
+Build the interface using the correct systems:
+
+* spacing
+* typography
+* color
+* motion
+* accessibility
+* responsive behavior
+* component consistency
+
+---
+
+# Design Systems
+
+## Spacing — 8pt Grid
+
+Use multiples of 8:
+
+```txt
+4px
+8px
+16px
+24px
+32px
+48px
+64px
+96px
+128px
+```
+
+Use 4px only for:
+
+* Borders
+* Icon spacing
+* Small typography adjustments
+
+Avoid random values.
+
+Bad:
+
+```css
+margin: 17px;
+```
+
+Good:
+
+```css
+margin: 16px;
+```
+
+Every value should belong to a design system.
+
+---
+
+# Typography System
+
+Use a modular scale.
+
+Default ratio:
+
+```txt
+1.250 Major Third
+```
+
+Example:
+
+```txt
+12px → Caption
+16px → Body
+20px → H4
+25px → H3
+31px → H2
+39px → H1
+```
+
+## Text Rules
+
+Readable line length:
+
+```txt
+45–75 characters per line
+```
+
+Recommended:
+
+```css
+max-width: 65ch;
+```
+
+Line-height:
+
+Body:
+
+```txt
+1.5–1.6
+```
+
+Headings:
+
+```txt
+1.1–1.2
+```
+
+Dense data:
+
+```txt
+1.2
+```
+
+Typography must match the mood of the request.
+
+A luxury interface should not use the same typographic rhythm as a playful game UI.
+
+---
+
+# Color Engineering
+
+Colors must be functional.
+
+Use:
+
+* HSL
+* OKLCH
+
+Prefer perceptual color spaces when defining the design system. Hex values are acceptable for implementation when derived from those tokens.
+
+## 60/30/10 Rule
+
+```txt
+60% Neutral background
+30% Secondary / Brand color
+10% Accent
+```
+
+Accent colors should mainly represent:
+
+* Buttons
+* Actions
+* Important states
+
+Do not use accent colors everywhere.
+
+## Color Adaptation
+
+Color choices must respond to the prompt.
+
+Examples:
+
+* Premium: restrained palette, lower saturation, subtle contrast
+* Energetic: stronger chroma, sharper accents, more visual punch
+* Calm: soft neutrals, lower contrast, slower rhythm
+* Experimental: more contrast, unusual palette pairings, careful balance
+
+---
+
+# Dark Mode
+
+Dark mode is not simply inverted light mode.
+
+Rules:
+
+* Increase shadow brightness
+* Reduce saturated colors by 20–30%
+* Avoid extreme contrast vibration
+* Keep text legible without harsh glare
+
+Dark interfaces should feel intentional, not just darkened.
+
+---
+
+# Motion Design
+
+Motion should reinforce the requested style.
+
+Animation timings:
+
+## Micro interactions
+
+```txt
+150–250ms
+```
+
+## Page transitions
+
+```txt
+300–500ms
+```
+
+Use:
+
+* Entering elements: ease-out
+* Leaving elements: ease-in
+
+Avoid linear animations.
+
+## Motion Adaptation
+
+Match motion to the prompt:
+
+* Premium → smooth, restrained, polished
+* Playful → slightly bouncy, expressive, surprising
+* Futuristic → crisp, precise, technologically clean
+* Editorial → subtle, elegant, low-distraction
+* Gaming → energetic, responsive, high feedback
+
+Never animate for decoration alone.
+
+---
+
+# Component Engineering
+
+Design systems must work at the component level.
+
+Define and maintain consistent rules for:
+
+* Buttons
+* Inputs
+* Cards
+* Modals
+* Sidebars
+* Navigation
+* Dropdowns
+* Tabs
+* Badges
+* Toasts
+* Tables
+* Empty states
+* Loading states
+* Error states
+
+For each component, define:
+
+* Purpose
+* Sizes
+* States
+* Spacing
+* Radius
+* Shadows
+* Typography
+* Interaction feedback
+
+Buttons should not be designed differently every time unless the prompt explicitly asks for variation.
+
+---
+
+# Design Tokens
+
+Use tokens for all key UI decisions.
+
+Define:
+
+* spacing
+* radius
+* shadow
+* font
+* transition
+* surface
+* primary
+* secondary
+* accent
+* border
+* elevation
+* focus ring
+
+Tokens should be consistent, reusable, and easy to scale.
+
+---
+
+# Accessibility
+
+## Interactive States
+
+Every interactive element needs:
+
+| State    | Behavior                          |
+| -------- | --------------------------------- |
+| Default  | Normal appearance                 |
+| Hover    | +5% brightness or subtle movement |
+| Focus    | Visible keyboard outline          |
+| Active   | scale(0.98)                       |
+| Disabled | 40–50% opacity                    |
+| Loading  | Skeleton placeholders             |
+
+## Accessibility Rules
+
+### Semantic HTML
+
+Prefer:
+
+```html
+<button>
+<nav>
+<main>
+<section>
+<article>
+```
+
+Avoid creating fake buttons using:
+
+```html
+<div>
+```
+
+### Touch Targets
+
+Minimum:
+
+```txt
+44×44 CSS pixels
+```
+
+### Never rely only on colors
+
+Bad:
+
+```txt
+Red = Error
+Green = Success
+```
+
+Better:
+
+```txt
+Color + Icon + Text
+```
+
+### Contrast and Clarity
+
+Check:
+
+* Contrast ratio
+* Focus states
+* Touch targets
+* Color accessibility
+* Readability in both light and dark mode
+
+Accessibility should remain intact even in highly creative designs.
+
+---
+
+# Responsive Design
+
+Support:
+
+```txt
+320px → 2560px
+```
+
+Handle:
+
+* Mouse
+* Touch
+* Keyboard
+
+Also support:
+
+* Container queries
+* Fluid typography
+* Safe areas
+* Small screens
+* Ultra-wide screens
+
+Responsive behavior must preserve hierarchy and visual identity.
+
+---
+
+# Visual Composition
+
+Do not treat layout as decoration.
+
+Check:
+
+* Alignment
+* Balance
+* White space
+* Rhythm
+* Proportion
+* Visual grouping
+* Gestalt principles
+* Symmetry vs asymmetry
+
+A strong interface makes the eye move naturally.
+
+---
+
+# Cognitive Load
+
+Use:
+
+* Hick's Law
+* Miller's Law
+* Progressive disclosure
+
+Check:
+
+* Too many choices
+* Poor grouping
+* Information overload
+* Unclear next action
+
+Reduce friction before adding visual complexity.
+
+---
+
+# Visual Hierarchy
+
+Use:
+
+* Von Restorff Effect
+* Serial Position Effect
+
+Ask:
+
+* Is the primary action obvious?
+* Are important elements prioritized?
+* Does the user know where to look first?
+* Is the structure easy to scan?
+
+Hierarchy must match the prompt’s intent.
+
+---
+
+# Spatial Mathematics
+
+Check:
+
+* 8pt grid consistency
+* Line length
+* Typography scale
+* Card alignment
+* Section rhythm
+* Proportions between text and whitespace
+
+Every spatial decision should feel deliberate.
+
+---
+
+# Performance
+
+Good design must also be efficient.
+
+Consider:
+
+* LCP
+* CLS
+* INP
+* Lazy loading
+* Responsive images
+* Font loading
+* SVG vs PNG
+* GPU-friendly animations
+* Reduced layout shifts
+
+A beautiful interface that feels slow is a bad interface.
+
+---
+
+# UX Writing
+
+Text matters.
+
+Write:
+
+* Clear button labels
+* Helpful placeholders
+* Useful error messages
+* Friendly confirmations
+* Concise instructions
+* Meaningful empty states
+
+The copy should match the tone of the interface:
+
+* Professional
+* Friendly
+* Premium
+* Playful
+* Technical
+* Minimal
+
+---
+
+# Empty States
+
+Always design empty states.
+
+An empty screen should explain:
+
+* What is missing
+* Why it is empty
+* What the user can do next
+
+Empty states are part of the product, not an afterthought.
+
+---
+
+# Error States
+
+Always design:
+
+* 404
+* 500
+* Offline
+* Validation errors
+* Permission denied
+* Loading failures
+* Retry states
+
+Errors should be readable, calm, and actionable.
+
+---
+
+# Data Visualization
+
+When creating charts:
+
+* Prefer clarity over complexity
+* Use consistent axes and labels
+* Avoid unnecessary decoration
+* Ensure accessible contrast
+* Make the main insight obvious
+
+Charts must support understanding, not distract from it.
+
+---
+
+# Design Critique Framework
+
+Never critique with:
+
+> "It looks clean"
+
+Evaluate using principles.
+
+## Cognitive Load
+
+Check:
+
+* Too many choices
+* Poor grouping
+* Information overload
+
+## Visual Hierarchy
+
+Check:
+
+* Primary action obvious
+* Important elements prioritized
+* Scan path is natural
+
+## Spatial Mathematics
+
+Check:
+
+* 8pt grid consistency
+* Line length
+* Typography scale
+
+## Accessibility
+
+Check:
+
+* Contrast ratio
+* Focus states
+* Touch targets
+* Color accessibility
+
+## Style Matching
+
+Check:
+
+* Does this actually match the prompt?
+* Is the chosen visual language appropriate?
+* Does it feel generic or intentional?
+
+## Performance
+
+Check:
+
+* Is the UI efficient?
+* Are animations and assets reasonable?
+* Does the interface feel responsive?
+
+---
+
+# Creativity Scaling
+
+Adapt creativity to the prompt.
+
+If the prompt requests:
+
+* Professional → prioritize clarity
+* Premium → prioritize elegance
+* Futuristic → prioritize innovation
+* Experimental → explore unconventional layouts
+* Playful → increase visual expression
+* Corporate → maximize consistency
+* Artistic → allow controlled rule-breaking
+
+Never generate identical layouts for unrelated projects.
+
+Each interface should have its own visual identity.
+
+---
+
+# Code Standards
+
+When generating:
+
+* HTML
+* CSS
+* Tailwind
+* React
+
+Always create production-ready code.
+
+Requirements:
+
+* Semantic HTML
+* CSS variables
+* Responsive design
+* Dark mode support
+* Accessible interactions
+* Proper image dimensions
+* Consistent tokens
+* Prompt-aware styling
+
+---
+
+# Tailwind Rules
+
+Avoid arbitrary values:
+
+Bad:
+
+```html
+mt-[17px]
+```
+
+Good:
+
+```html
+mt-4
+```
+
+Follow:
+
+* 8pt spacing system
+* Modular typography scale
+* Consistent tokens
+* Reusable utility patterns
+
+Tailwind should accelerate the system, not replace it.
+
+---
+
+# Final Validation
+
+Before generating the final result, ask yourself:
+
+* Does this design match the requested style?
+* Would this interface fit the target audience?
+* Is there enough originality?
+* Is hierarchy clear?
+* Is accessibility preserved?
+* Does every visual decision support the user's goal?
+* Did I adapt to the prompt, or did I default to my habits?
+* Does the interface feel distinct from generic AI-generated layouts?
+
+If the answer to any question is no, revise the design before producing the final output.
+
+---
+
+# Design Philosophy
+
+A good interface is not decoration.
+
+It is a system where:
+
+* Every spacing value has meaning
+* Every color has a purpose
+* Every animation communicates something
+* Every component behaves predictably
+* Every style choice matches the prompt
+
+Design should feel obvious before users understand why.
